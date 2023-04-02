@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [color, setColor] = useState("#120");
   const [colorsList, setColorsList] = useState(new Values("#120").all(10));
+  const [grid, setGrid] = useState(true);
   const addColor = (clr) => {
     try {
       const newclr = new Values(clr).all(10);
@@ -19,15 +20,16 @@ function App() {
   };
 
   return (
-    <main>
+    <>
       <Form
         color={color}
         setColor={setColor}
         colorsList={colorsList}
         setColorsList={setColorsList}
         addColor={addColor}
+        setGrid={setGrid}
       />
-      <Colors colorsList={colorsList} />
+      <Colors colorsList={colorsList} grid={grid} />
       <ToastContainer
         position="top-center"
         autoClose={500}
@@ -40,7 +42,7 @@ function App() {
         pauseOnHover
         theme="dark"
       />
-    </main>
+    </>
   );
 }
 

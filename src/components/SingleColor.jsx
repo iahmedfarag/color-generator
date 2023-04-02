@@ -14,7 +14,6 @@ const SingleColor = ({ color, index }) => {
       toast("clipboard not avialable");
     }
   };
-
   return (
     <div
       className={index >= 10 ? "color light" : "color"}

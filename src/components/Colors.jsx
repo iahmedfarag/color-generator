@@ -1,9 +1,9 @@
 import React from "react";
 import SingleColor from "./SingleColor.jsx";
 
-const Colors = ({ colorsList }) => {
+const Colors = ({ colorsList, grid }) => {
   return (
-    <div className="colors">
+    <div className={grid ? "colors grid" : "colors"}>
       {colorsList.map((color, index) => {
         return <SingleColor color={color} index={index} key={index} />;
       })}
