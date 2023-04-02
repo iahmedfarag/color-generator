@@ -26,7 +26,7 @@ button {
 .navbar {
   width: 100%;
   position: relative;
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
@@ -59,7 +59,7 @@ button {
 }
 @media (max-width: 768px) {
   .navbar form .colorInput {
-    width: 200px;
+    width: 150px;
   }
 }
 .navbar form button {
@@ -69,17 +69,17 @@ button {
   letter-spacing: 1.5px;
   background-color: #120;
 }
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: left;
+  }
+}
 .navbar .control {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   z-index: 5;
-}
-@media (max-width: 768px) {
-  .navbar .control {
-    right: 5px;
-  }
 }
 .navbar .control i {
   font-size: 30px;

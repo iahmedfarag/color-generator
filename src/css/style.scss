@@ -22,13 +22,14 @@ button {
 .navbar {
   width: 100%;
   position: relative;
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   form {
     display: flex;
     align-items: center;
     justify-content: center;
+
     input {
       border: none;
       padding: none;
@@ -51,7 +52,7 @@ button {
         border-bottom: 5px solid #120;
       }
       @media (max-width: 768px) {
-        width: 200px;
+        width: 150px;
       }
     }
     button {
@@ -62,6 +63,9 @@ button {
       background-color: #120;
     }
   }
+  @media (max-width: 768px) {
+    justify-content: left;
+  }
 
   .control {
     position: absolute;
@@ -69,9 +73,6 @@ button {
     right: 20px;
     transform: translateY(-50%);
     z-index: 5;
-    @media (max-width: 768px) {
-      right: 5px;
-    }
     i {
       font-size: 30px;
       margin: 0 10px;
