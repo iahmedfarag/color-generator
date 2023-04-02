@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+// container
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+}
+
+.navbar {
+  position: relative;
+  padding: 20px 0;
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input {
+      border: none;
+      padding: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    .colorFilter {
+      width: 37px;
+      height: 37px;
+    }
+    .colorInput {
+      border-bottom: 5px solid #120;
+      margin: 0 20px;
+      padding: 10px 20px;
+      width: 50%;
+      transition: 0.3s;
+      font-size: 16px;
+      &:focus {
+        border-bottom: 5px solid #120;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      background-color: #120;
+    }
+  }
+
+  .control {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: white;
+    i {
+      font-size: 30px;
+      margin: 0 10px;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.colors {
+  height: calc(100vh - 83px);
+  width: 100%;
+  display: flex;
+
+  .color {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 20px 10px;
+    transition: 0.3s;
+    .weight {
+      margin-bottom: 10px;
+    }
+    &:hover {
+      width: 200%;
+    }
+    &.light {
+      color: white;
+    }
+  }
+  &.grid {
+    flex-wrap: wrap;
+    height: auto;
+    .color {
+      width: calc(100% / 8);
+      height: 200px;
+      &:hover {
+        width: calc(100% / 9);
+      }
+    }
+  }
+}

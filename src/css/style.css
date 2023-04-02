@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.navbar {
+  position: relative;
+  padding: 20px 0;
+}
+.navbar form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar form input {
+  border: none;
+  padding: none;
+}
+.navbar form input:focus {
+  outline: none;
+}
+.navbar form .colorFilter {
+  width: 37px;
+  height: 37px;
+}
+.navbar form .colorInput {
+  border-bottom: 5px solid #120;
+  margin: 0 20px;
+  padding: 10px 20px;
+  width: 50%;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.navbar form .colorInput:focus {
+  border-bottom: 5px solid #120;
+}
+.navbar form button {
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  background-color: #120;
+}
+.navbar .control {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: white;
+}
+.navbar .control i {
+  font-size: 30px;
+  margin: 0 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.navbar .control i:hover {
+  opacity: 0.8;
+}
+
+.colors {
+  height: calc(100vh - 83px);
+  width: 100%;
+  display: flex;
+}
+.colors .color {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  padding: 20px 10px;
+  transition: 0.3s;
+}
+.colors .color .weight {
+  margin-bottom: 10px;
+}
+.colors .color:hover {
+  width: 200%;
+}
+.colors .color.light {
+  color: white;
+}
+.colors.grid {
+  flex-wrap: wrap;
+  height: auto;
+}
+.colors.grid .color {
+  width: 12.5%;
+  height: 200px;
+}
+.colors.grid .color:hover {
+  width: 11.1111111111%;
+}/*# sourceMappingURL=style.css.map */
